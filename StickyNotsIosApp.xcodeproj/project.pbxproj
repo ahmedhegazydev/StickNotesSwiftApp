@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DBC9F31D6B22EBE9B2993A /* Pods_StickyNotsIosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA1A8F9C915D1BE579203F4 /* Pods_StickyNotsIosApp.framework */; };
+		E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A2F38241403BD00D7B221 /* TabViewController.swift */; };
 		E24DCC1D2410CBB90026338D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DCC1C2410CBB90026338D /* AppDelegate.swift */; };
 		E24DCC1F2410CBB90026338D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DCC1E2410CBB90026338D /* SceneDelegate.swift */; };
 		E24DCC212410CBB90026338D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DCC202410CBB90026338D /* ViewController.swift */; };
@@ -17,7 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E24DCC192410CBB90026338D /* StickyNotsIosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyNotsIosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		347E91F7A02BE2CAF3EC504E /* Pods-StickyNotsIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.release.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.release.xcconfig"; sourceTree = "<group>"; };
+		CAA1A8F9C915D1BE579203F4 /* Pods_StickyNotsIosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyNotsIosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24A2F38241403BD00D7B221 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		E24DCC192410CBB90026338D /* StickyNotsIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyNotsIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24DCC1C2410CBB90026338D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E24DCC1E2410CBB90026338D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E24DCC202410CBB90026338D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		E24DCC282410CBBE0026338D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24DCC2B2410CBBE0026338D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E24DCC2D2410CBBE0026338D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE0F3A940A1A966E419981F /* Pods-StickyNotsIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.debug.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,24 +39,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DBC9F31D6B22EBE9B2993A /* Pods_StickyNotsIosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE89E11167125381758DC27D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAA1A8F9C915D1BE579203F4 /* Pods_StickyNotsIosApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E24DCC102410CBB90026338D = {
 			isa = PBXGroup;
 			children = (
 				E24DCC1B2410CBB90026338D /* StickyNotsIosApp */,
 				E24DCC1A2410CBB90026338D /* Products */,
+				EA251B3FFB971D761E9E0608 /* Pods */,
+				DE89E11167125381758DC27D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		E24DCC1A2410CBB90026338D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E24DCC192410CBB90026338D /* StickyNotsIosApp.app */,
+				E24DCC192410CBB90026338D /* StickyNotsIos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,8 +83,18 @@
 				E24DCC2A2410CBBE0026338D /* LaunchScreen.storyboard */,
 				E24DCC2D2410CBBE0026338D /* Info.plist */,
 				E24DCC252410CBB90026338D /* StickyNotsIosApp.xcdatamodeld */,
+				E24A2F38241403BD00D7B221 /* TabViewController.swift */,
 			);
 			path = StickyNotsIosApp;
+			sourceTree = "<group>";
+		};
+		EA251B3FFB971D761E9E0608 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDE0F3A940A1A966E419981F /* Pods-StickyNotsIosApp.debug.xcconfig */,
+				347E91F7A02BE2CAF3EC504E /* Pods-StickyNotsIosApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E24DCC302410CBBE0026338D /* Build configuration list for PBXNativeTarget "StickyNotsIosApp" */;
 			buildPhases = (
+				7DD9EE6FADA76D9ED96A9D26 /* [CP] Check Pods Manifest.lock */,
 				E24DCC152410CBB90026338D /* Sources */,
 				E24DCC162410CBB90026338D /* Frameworks */,
 				E24DCC172410CBB90026338D /* Resources */,
+				AF6923DA7CA4356C4FF22DC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -87,7 +116,7 @@
 			);
 			name = StickyNotsIosApp;
 			productName = StickyNotsIosApp;
-			productReference = E24DCC192410CBB90026338D /* StickyNotsIosApp.app */;
+			productReference = E24DCC192410CBB90026338D /* StickyNotsIos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DD9EE6FADA76D9ED96A9D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyNotsIosApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF6923DA7CA4356C4FF22DC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E24DCC152410CBB90026338D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +215,7 @@
 				E24DCC272410CBB90026338D /* StickyNotsIosApp.xcdatamodeld in Sources */,
 				E24DCC212410CBB90026338D /* ViewController.swift in Sources */,
 				E24DCC1D2410CBB90026338D /* AppDelegate.swift in Sources */,
+				E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */,
 				E24DCC1F2410CBB90026338D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +358,7 @@
 		};
 		E24DCC312410CBBE0026338D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE0F3A940A1A966E419981F /* Pods-StickyNotsIosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hegzo.StickyNotsIosApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StickyNotsIos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +377,7 @@
 		};
 		E24DCC322410CBBE0026338D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 347E91F7A02BE2CAF3EC504E /* Pods-StickyNotsIosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,7 +388,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hegzo.StickyNotsIosApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StickyNotsIos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
