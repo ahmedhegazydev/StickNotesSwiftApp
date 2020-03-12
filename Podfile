@@ -7,7 +7,7 @@ target 'StickyNotsIosApp' do
 
   # Pods for StickyNotsIosApp
 
-pod 'Tabman', '~> 2.6'
+#pod 'Tabman', '~> 2.6'
 
 
 end

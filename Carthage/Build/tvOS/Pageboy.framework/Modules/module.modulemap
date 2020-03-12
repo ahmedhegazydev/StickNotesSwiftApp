@@ -1,0 +1,4 @@
+framework module Pageboy {
+  header "Pageboy-Swift.h"
+  requires objc
+}
