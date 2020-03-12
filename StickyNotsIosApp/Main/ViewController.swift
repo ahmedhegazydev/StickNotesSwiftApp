@@ -92,6 +92,10 @@ class ViewController: UIViewController {
         
         //showing the alertviewcontroller
         //above the main view controller
+        showingDialogAboveMainViewController()
+    }
+    
+    func showingDialogAboveMainViewController(){
         
         
         

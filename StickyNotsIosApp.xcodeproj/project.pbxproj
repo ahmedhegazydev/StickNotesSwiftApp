@@ -19,6 +19,8 @@
 		E24DCC2C2410CBBE0026338D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24DCC2A2410CBBE0026338D /* LaunchScreen.storyboard */; };
 		E255FA23241AC9710049870C /* DaisyRae-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E255FA22241AC9710049870C /* DaisyRae-Thin.ttf */; };
 		E255FA25241ACC860049870C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255FA24241ACC860049870C /* Constants.swift */; };
+		E255FA2A241AD8580049870C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255FA29241AD8580049870C /* AlertViewController.swift */; };
+		E255FA2C241AD8640049870C /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E255FA2B241AD8640049870C /* Alert.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E24DCC2D2410CBBE0026338D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E255FA22241AC9710049870C /* DaisyRae-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DaisyRae-Thin.ttf"; sourceTree = "<group>"; };
 		E255FA24241ACC860049870C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E255FA29241AD8580049870C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		E255FA2B241AD8640049870C /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		FDE0F3A940A1A966E419981F /* Pods-StickyNotsIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.debug.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 		E24DCC1B2410CBB90026338D /* StickyNotsIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				E255FA28241AD8310049870C /* AlertViewController */,
 				E255FA27241ACCF90049870C /* Main */,
 				E255FA26241ACCB70049870C /* Constants */,
 				E255FA21241AC9610049870C /* Fonts */,
@@ -121,6 +126,15 @@
 				E24DCC222410CBB90026338D /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E255FA28241AD8310049870C /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E255FA29241AD8580049870C /* AlertViewController.swift */,
+				E255FA2B241AD8640049870C /* Alert.storyboard */,
+			);
+			path = AlertViewController;
 			sourceTree = "<group>";
 		};
 		EA251B3FFB971D761E9E0608 /* Pods */ = {
@@ -196,6 +210,7 @@
 				E24DCC292410CBBE0026338D /* Assets.xcassets in Resources */,
 				E24DCC242410CBB90026338D /* Main.storyboard in Resources */,
 				E255FA23241AC9710049870C /* DaisyRae-Thin.ttf in Resources */,
+				E255FA2C241AD8640049870C /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24DCC272410CBB90026338D /* StickyNotsIosApp.xcdatamodeld in Sources */,
+				E255FA2A241AD8580049870C /* AlertViewController.swift in Sources */,
 				E24DCC212410CBB90026338D /* ViewController.swift in Sources */,
 				E24DCC1D2410CBB90026338D /* AppDelegate.swift in Sources */,
 				E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */,
