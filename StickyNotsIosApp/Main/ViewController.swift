@@ -27,6 +27,11 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         debugPrint("viewDidAppear")
         
+        //setting the bg color for the main view container
+        //self.view.backgroundColor = .darkGray
+        self.view.backgroundColor = UIColor.black
+        
+        
         addingTheCenterLabel()
     }
     
@@ -97,7 +102,10 @@ class ViewController: UIViewController {
     
     func showingDialogAboveMainViewController(){
         
-        
+        let alertViewController: AlertViewController = AlertService.shared.alert()
+        self.present(alertViewController, animated: true) {
+            
+        }
         
         
     }

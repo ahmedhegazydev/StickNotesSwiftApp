@@ -21,6 +21,8 @@
 		E255FA25241ACC860049870C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255FA24241ACC860049870C /* Constants.swift */; };
 		E255FA2A241AD8580049870C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255FA29241AD8580049870C /* AlertViewController.swift */; };
 		E255FA2C241AD8640049870C /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E255FA2B241AD8640049870C /* Alert.storyboard */; };
+		E255FA2E241ADEA50049870C /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255FA2D241ADEA50049870C /* AlertService.swift */; };
+		E255FA31241AEA480049870C /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255FA30241AEA480049870C /* ColorTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		E255FA24241ACC860049870C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E255FA29241AD8580049870C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		E255FA2B241AD8640049870C /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		E255FA2D241ADEA50049870C /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		E255FA30241AEA480049870C /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		FDE0F3A940A1A966E419981F /* Pods-StickyNotsIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.debug.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,7 @@
 		E24DCC1B2410CBB90026338D /* StickyNotsIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				E255FA2F241AEA1B0049870C /* Cells */,
 				E255FA28241AD8310049870C /* AlertViewController */,
 				E255FA27241ACCF90049870C /* Main */,
 				E255FA26241ACCB70049870C /* Constants */,
@@ -133,8 +138,17 @@
 			children = (
 				E255FA29241AD8580049870C /* AlertViewController.swift */,
 				E255FA2B241AD8640049870C /* Alert.storyboard */,
+				E255FA2D241ADEA50049870C /* AlertService.swift */,
 			);
 			path = AlertViewController;
+			sourceTree = "<group>";
+		};
+		E255FA2F241AEA1B0049870C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E255FA30241AEA480049870C /* ColorTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EA251B3FFB971D761E9E0608 /* Pods */ = {
@@ -251,7 +265,9 @@
 				E24DCC212410CBB90026338D /* ViewController.swift in Sources */,
 				E24DCC1D2410CBB90026338D /* AppDelegate.swift in Sources */,
 				E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */,
+				E255FA31241AEA480049870C /* ColorTableViewCell.swift in Sources */,
 				E24DCC1F2410CBB90026338D /* SceneDelegate.swift in Sources */,
+				E255FA2E241ADEA50049870C /* AlertService.swift in Sources */,
 				E255FA25241ACC860049870C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
