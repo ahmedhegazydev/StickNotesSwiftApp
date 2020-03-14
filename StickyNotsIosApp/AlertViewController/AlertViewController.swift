@@ -25,6 +25,30 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         .systemIndigo
     ]
     
+    fileprivate let etEnterYourNotes: UITextView =  {
+        //let et = UITextField()
+        let et = UITextView()
+        
+        //setting the rounded corner
+        et.layer.cornerRadius = 10
+        et.layer.masksToBounds = true;
+        
+        
+        //setting the text color
+        //et.textColor = UIColor.white
+        et.textColor = .gray
+        
+        et.backgroundColor = UIColor.white
+        
+        
+        //setting text size
+        et.font = UIFont.systemFont(ofSize: 20)
+        
+        //prevent scorllable
+        et.isScrollEnabled = false
+        
+        return et;
+    }()
     
     fileprivate let colorsCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -58,6 +82,39 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        exitOnViewClick()
         //addingTheHorizontalColorsTableView()
         addingColorHCollectionView()
+        
+        
+        addingTheCenterEditText()
+        
+    }
+    
+    func addingTheCenterEditText(){
+        
+        //Adding the TextField
+        self.view.addSubview(self.etEnterYourNotes)
+        
+
+        //setting the width and height
+        let leftRightSpacing = CGFloat(30)
+        self.etEnterYourNotes.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - leftRightSpacing, height: CGFloat(50))
+        
+        
+        //Centerizing the textField
+        //Adding th TextField to the center of screen
+        self.etEnterYourNotes.center = self.view.center
+        
+        
+        //center the text
+        self.etEnterYourNotes.textAlignment = .center
+        
+        
+        self.etEnterYourNotes.delegate = self
+        
+        //Adding margin left and right
+        let pading = CGFloat(10)
+        self.etEnterYourNotes.textContainerInset = UIEdgeInsets(top: 0, left: pading, bottom: 0, right: pading)
+        
+        
         
         
     }
@@ -261,5 +318,26 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
         
     }
     
+    
+}
+
+
+extension AlertViewController: UITextViewDelegate{
+    
+    func textViewDidChange(_ textView: UITextView) {
+        debugPrint("TextView text = \(textView.text)")
+        
+        let size = CGSize(width: self.view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach { (contrain) in
+            
+            if contrain.firstAttribute == .height{
+                contrain.constant = estimatedSize.height
+            }
+        
+        }
+        
+    }
     
 }
