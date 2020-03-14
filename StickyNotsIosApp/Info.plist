@@ -44,7 +44,7 @@
 		</dict>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>Tab</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Alert</string>
 	<key>UIRequiredDeviceCapabilities</key>

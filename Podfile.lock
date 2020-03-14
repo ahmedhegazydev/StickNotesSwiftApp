@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 122f02c7300284080bc710c05b3a5fbacd08aa04
+PODS:
+  - SimpleAnimation (0.4.2)
+
+DEPENDENCIES:
+  - SimpleAnimation
+
+SPEC REPOS:
+  trunk:
+    - SimpleAnimation
+
+SPEC CHECKSUMS:
+  SimpleAnimation: 5430010b9548f392e7459290acce01c9ceba7171
+
+PODFILE CHECKSUM: 43c0681c4c7899c3c4e66aabbfc25b8f6a5958f2
 
 COCOAPODS: 1.8.4

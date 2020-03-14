@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00DBC9F31D6B22EBE9B2993A /* Pods_StickyNotsIosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA1A8F9C915D1BE579203F4 /* Pods_StickyNotsIosApp.framework */; };
+		1850EF508BB46184AE090112 /* libPods-StickyNotsIosApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */; };
 		E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A2F38241403BD00D7B221 /* TabViewController.swift */; };
 		E24A2F3B2414065100D7B221 /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24A2F3A2414065100D7B221 /* Tab.storyboard */; };
 		E24DCC1D2410CBB90026338D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DCC1C2410CBB90026338D /* AppDelegate.swift */; };
@@ -27,10 +27,12 @@
 
 /* Begin PBXFileReference section */
 		347E91F7A02BE2CAF3EC504E /* Pods-StickyNotsIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.release.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.release.xcconfig"; sourceTree = "<group>"; };
-		CAA1A8F9C915D1BE579203F4 /* Pods_StickyNotsIosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyNotsIosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StickyNotsIosApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24A2F38241403BD00D7B221 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		E24A2F3A2414065100D7B221 /* Tab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tab.storyboard; sourceTree = "<group>"; };
 		E24A2F3C241408E900D7B221 /* Pageboy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pageboy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24C78EB241CDBEA00D20612 /* SimpleAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24C78F2241CDCE700D20612 /* SimpleAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24DCC192410CBB90026338D /* StickyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24DCC1C2410CBB90026338D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E24DCC1E2410CBB90026338D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00DBC9F31D6B22EBE9B2993A /* Pods_StickyNotsIosApp.framework in Frameworks */,
+				1850EF508BB46184AE090112 /* libPods-StickyNotsIosApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +66,10 @@
 		DE89E11167125381758DC27D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E24C78F2241CDCE700D20612 /* SimpleAnimation.framework */,
+				E24C78EB241CDBEA00D20612 /* SimpleAnimation.framework */,
 				E24A2F3C241408E900D7B221 /* Pageboy.framework */,
-				CAA1A8F9C915D1BE579203F4 /* Pods_StickyNotsIosApp.framework */,
+				AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

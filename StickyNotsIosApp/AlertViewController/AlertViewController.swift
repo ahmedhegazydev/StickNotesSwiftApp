@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SimpleAnimation
+
 
 class AlertViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -27,7 +29,11 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
     fileprivate let colorsCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        
+        //flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 10//seting spacing between cells
+        let padding  = CGFloat(20)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
+
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false;
@@ -79,12 +85,14 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         //Adding the my colorsCollectionView
         self.view.addSubview(self.colorsCollectionView)
         
+        
         //setting the background color
 //        self.colorsCollectionView.backgroundColor = UIColor.white
         self.colorsCollectionView.backgroundColor = UIColor.clear//no color
         
         
-        let margin = CGFloat(20)
+        //let margin = CGFloat(20)
+        let margin = CGFloat(0)
         //Adding some constraints
         self.colorsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
         self.colorsCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: margin).isActive = true
@@ -102,6 +110,16 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         
+        //Setting animation
+//        settingAnimToSomeview(self.colorsCollectionView)
+        
+        
+    }
+    
+    func settingAnimToSomeview(_ view: UIView){
+        //self.colorsCollectionView.bounceIn(from: .bottom)
+        //self.colorsCollectionView.popIn()
+        view.shake(toward: .top, amount: 0.5, duration: 2, delay: 0.5)
     }
     
     func exitOnViewClick(){
@@ -148,7 +166,7 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let divideBy = CGFloat(5);
+        let divideBy = CGFloat(6.5);
         return CGSize(width: collectionView.frame.width / divideBy, height: collectionView.frame.width / divideBy)
         //return CGSize(width: 50, height: 50)
         
@@ -218,7 +236,7 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
         //cell.backgroundColor = .red
         cell.backgroundColor = self.colorsArray[indexPath.row]
         
-        cell.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 18
         cell.layer.masksToBounds = true;
         
         
@@ -226,6 +244,12 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
 //        let gestRecog = UITapGestureRecognizer()
 //        gestRecog.addTarget(self, action: #selector(handleOnCellSelected(sender:)))
 //        cell.addGestureRecognizer(gestRecog)
+        
+        
+        
+        //setting anim to cell
+        //settingAnimToSomeview(cell)
+        
         
         //return UICollectionViewCell()
         return cell

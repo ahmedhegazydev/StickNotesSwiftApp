@@ -3,11 +3,18 @@
 
 target 'StickyNotsIosApp' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
+  # use_frameworks!
+    use_modular_headers!
   # Pods for StickyNotsIosApp
 
-#pod 'Tabman', '~> 2.6'
+
+  #TabViewController
+  #pod 'Tabman', '~> 2.6'
+
+  #Animations
+  pod "SimpleAnimation"
+  
+
 
 
 end

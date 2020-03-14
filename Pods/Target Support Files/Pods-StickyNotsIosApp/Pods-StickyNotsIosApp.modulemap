@@ -1,4 +1,4 @@
-framework module Pods_StickyNotsIosApp {
+module Pods_StickyNotsIosApp {
   umbrella header "Pods-StickyNotsIosApp-umbrella.h"
 
   export *
