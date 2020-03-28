@@ -16,6 +16,7 @@ target 'StickyNotsIosApp' do
   
   pod 'SwiftySound'
 
+  pod 'GrowingTextView', '0.7.2'
 
 
 end

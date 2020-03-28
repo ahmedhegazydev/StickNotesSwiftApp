@@ -8,11 +8,17 @@
 
 import UIKit
 import SimpleAnimation
+import GrowingTextView
+import SwiftySound
+import AVFoundation
+
 
 
 class AlertViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var selectedColor: UIColor = .black//default
+    
+    @IBOutlet weak var etEnterYourNotes: GrowingTextView!
     
     var colorsArray : [UIColor] = [
         //.black,
@@ -25,30 +31,24 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         .systemIndigo
     ]
     
-    fileprivate let etEnterYourNotes: UITextView =  {
-        //let et = UITextField()
-        let et = UITextView()
-        
-        //setting the rounded corner
-        et.layer.cornerRadius = 10
-        et.layer.masksToBounds = true;
-        
-        
-        //setting the text color
-        //et.textColor = UIColor.white
-        et.textColor = .gray
-        
-        et.backgroundColor = UIColor.white
-        
-        
-        //setting text size
-        et.font = UIFont.systemFont(ofSize: 20)
-        
-        //prevent scorllable
-        et.isScrollEnabled = false
-        
-        return et;
-    }()
+    //fileprivate let etEnterYourNotes: UITextView =  {
+    //    fileprivate let etEnterYourNotes: GrowingTextView = {
+    //        //let et = UITextField()
+    //        //let et = UITextView()
+    //        let et = GrowingTextView()
+    //        //setting the rounded corner
+    //        et.layer.cornerRadius = 10
+    //        et.layer.masksToBounds = true;
+    //        //setting the text color
+    //        //et.textColor = UIColor.white
+    //        et.textColor = .gray
+    //        et.backgroundColor = UIColor.white
+    //        //setting text size
+    //        et.font = UIFont.systemFont(ofSize: 20)
+    //        //prevent scorllable
+    //        et.isScrollEnabled = false
+    //        return et;
+    //    }()
     
     fileprivate let colorsCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -57,15 +57,13 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         flowLayout.minimumLineSpacing = 10//seting spacing between cells
         let padding  = CGFloat(20)
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
-
+        
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false;
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.showsHorizontalScrollIndicator = false//hiding
         collectionView.isUserInteractionEnabled =  true
-        
-        
         
         
         return collectionView
@@ -78,43 +76,62 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         //self.view.backgroundColor = .darkGray
         self.view.backgroundColor = UIColor.black
         
+        //Sometime the view controller may incorrectly adjust the inset of textview automatically. To avoid this, set automaticallyAdjustsScrollViewInsets to false
+        //automaticallyAdjustsScrollViewInsets = false
         
-//        exitOnViewClick()
+        
+        //        exitOnViewClick()
         //addingTheHorizontalColorsTableView()
         addingColorHCollectionView()
-        
         addingTheCenterEditText()
+        
+        addDoubleTapGestRecognizerToMainView()
+    }
+    
+    func addDoubleTapGestRecognizerToMainView(){
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(self.onHandleDoubleTapForMainView(sender: )))
+        doubleTap.numberOfTapsRequired = 2//double
+        self.view.addGestureRecognizer(doubleTap)
+    }
+    
+    @objc func onHandleDoubleTapForMainView(sender: UITapGestureRecognizer? = nil){
+        
+        debugPrint("2 taps")
+        
+        //play system sound
+        //1108    photoShutter.caf    CameraShutter
+        let soundId: SystemSoundID = 1108
+        AudioServicesPlaySystemSound(soundId)
+        
+        //take screen
         
     }
     
     func addingTheCenterEditText(){
-        
         //Adding the TextField
-        self.view.addSubview(self.etEnterYourNotes)
-        
-
-        //setting the width and height
-        let leftRightSpacing = CGFloat(30)
-        self.etEnterYourNotes.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - leftRightSpacing, height: CGFloat(50))
-        
-        
-        //Centerizing the textField
-        //Adding th TextField to the center of screen
-        self.etEnterYourNotes.center = self.view.center
-        
-        
-        //center the text
+        //        self.view.addSubview(self.etEnterYourNotes)
+        //        //setting the width and height
+        //        let leftRightSpacing = CGFloat(30)
+        //        self.etEnterYourNotes.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - leftRightSpacing, height: CGFloat(50))
+        //        //Centerizing the textField
+        //        //Adding th TextField to the center of screen
+        //        self.etEnterYourNotes.center = self.view.center
+        //        //center the text
         self.etEnterYourNotes.textAlignment = .center
-        
-        
-        self.etEnterYourNotes.delegate = self
-        
-        //Adding margin left and right
-        let pading = CGFloat(10)
-        self.etEnterYourNotes.textContainerInset = UIEdgeInsets(top: 0, left: pading, bottom: 0, right: pading)
-        
-        
-        
+        //        self.etEnterYourNotes.delegate = self
+        //        //Adding margin left and right
+        //        let pading = CGFloat(10)
+        //        self.etEnterYourNotes.textContainerInset = UIEdgeInsets(top: 0, left: pading, bottom: 0, right: pading)
+        //        self.etEnterYourNotes.maxLength = 200
+        //        self.etEnterYourNotes.maxHeight = 70
+        //self.etEnterYourNotes.minHeight = 50
+//self.etEnterYourNotes.trimWhiteSpaceWhenEndEditing = true
+        //self.etEnterYourNotes.placeholder = "Say something..."
+        //self.etEnterYourNotes.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
+        self.etEnterYourNotes.font = UIFont.systemFont(ofSize: 20)
+//        self.etEnterYourNotes.translatesAutoresizingMaskIntoConstraints = false
+        self.etEnterYourNotes.backgroundColor = UIColor.white
+        self.etEnterYourNotes.layer.cornerRadius = 25
         
     }
     
@@ -143,7 +160,7 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         //setting the background color
-//        self.colorsCollectionView.backgroundColor = UIColor.white
+        //        self.colorsCollectionView.backgroundColor = UIColor.white
         self.colorsCollectionView.backgroundColor = UIColor.clear//no color
         
         
@@ -167,7 +184,7 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         //Setting animation
-//        settingAnimToSomeview(self.colorsCollectionView)
+        //        settingAnimToSomeview(self.colorsCollectionView)
         
         
     }
@@ -250,10 +267,10 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
         self.selectedColor = selectedClr
         
         
-//        if let cell = collectionView.cellForItem(at: indexPath) {
-//            //for hiding the selected cell
-////            cell.isHidden = true;
-//        }
+        //        if let cell = collectionView.cellForItem(at: indexPath) {
+        //            //for hiding the selected cell
+        ////            cell.isHidden = true;
+        //        }
         
         //remove the selected color
         self.colorsArray.remove(at: pos)
@@ -297,9 +314,9 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
         
         
         cell.isUserInteractionEnabled = true
-//        let gestRecog = UITapGestureRecognizer()
-//        gestRecog.addTarget(self, action: #selector(handleOnCellSelected(sender:)))
-//        cell.addGestureRecognizer(gestRecog)
+        //        let gestRecog = UITapGestureRecognizer()
+        //        gestRecog.addTarget(self, action: #selector(handleOnCellSelected(sender:)))
+        //        cell.addGestureRecognizer(gestRecog)
         
         
         
@@ -334,7 +351,7 @@ extension AlertViewController: UITextViewDelegate{
             if contrain.firstAttribute == .height{
                 contrain.constant = estimatedSize.height
             }
-        
+            
         }
         
     }
