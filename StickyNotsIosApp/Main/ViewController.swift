@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftySound
+import AVFoundation
+
 
 class ViewController: UIViewController {
     
@@ -104,10 +107,26 @@ class ViewController: UIViewController {
         
         let alertViewController: AlertViewController = AlertService.shared.alert()
         self.present(alertViewController, animated: true) {
+            debugPrint("showing the alert viewcontroller above main vc")
+            
+            //self.playWavSound()
+            self.playSystemSound()
             
         }
-        
-        
+    }
+    
+    func playSystemSound(){
+        //from 1000 to 4095
+        //https://github.com/TUNER88/iOSSystemSoundsLibrary
+        let systemSoundId: SystemSoundID = 1016//tweet sound
+        AudioServicesPlaySystemSound(systemSoundId)
+    }
+    
+    func playWavSound(){
+        Sound.category = .ambient
+        Sound.play(file: "sound.wav")
+        //Sound.play(file: "dog", fileExtension: "wav", numberOfLoops: 2)
+//        Sound.play(url: fileURL)
     }
     
     

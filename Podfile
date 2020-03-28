@@ -14,6 +14,7 @@ target 'StickyNotsIosApp' do
   #Animations
   pod "SimpleAnimation"
   
+  pod 'SwiftySound'
 
 
 

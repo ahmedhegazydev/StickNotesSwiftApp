@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002D4F5C242F028500D69EC8 /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 002D4F5B242F028500D69EC8 /* sound.wav */; };
 		1850EF508BB46184AE090112 /* libPods-StickyNotsIosApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */; };
 		E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A2F38241403BD00D7B221 /* TabViewController.swift */; };
 		E24A2F3B2414065100D7B221 /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24A2F3A2414065100D7B221 /* Tab.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002D4F5B242F028500D69EC8 /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		347E91F7A02BE2CAF3EC504E /* Pods-StickyNotsIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.release.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StickyNotsIosApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24A2F38241403BD00D7B221 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002D4F5A242F025D00D69EC8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				002D4F5B242F028500D69EC8 /* sound.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		DE89E11167125381758DC27D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		E24DCC1B2410CBB90026338D /* StickyNotsIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				002D4F5A242F025D00D69EC8 /* Sounds */,
 				E255FA2F241AEA1B0049870C /* Cells */,
 				E255FA28241AD8310049870C /* AlertViewController */,
 				E255FA27241ACCF90049870C /* Main */,
@@ -225,6 +236,7 @@
 			files = (
 				E24A2F3B2414065100D7B221 /* Tab.storyboard in Resources */,
 				E24DCC2C2410CBBE0026338D /* LaunchScreen.storyboard in Resources */,
+				002D4F5C242F028500D69EC8 /* sound.wav in Resources */,
 				E24DCC292410CBBE0026338D /* Assets.xcassets in Resources */,
 				E24DCC242410CBB90026338D /* Main.storyboard in Resources */,
 				E255FA23241AC9710049870C /* DaisyRae-Thin.ttf in Resources */,

@@ -3,48 +3,74 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EBA5AE75D6E6E7791D0511609187D7C /* SimpleAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8700C2327D798463F901A385BFB440C /* SimpleAnimation-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		37A29D14DEF4A0A622301A88C6FD18FB /* Pods-StickyNotsIosApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF78D82BA7636018A83F0741A0CEB8A8 /* Pods-StickyNotsIosApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3C58B62145A6881E55F8776A27EEBB66 /* UIView+SimpleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F91668D3CA170569133088DA358236 /* UIView+SimpleAnimation.swift */; };
-		56ABF4D5A5E1DBCD74ECC3590EE4B557 /* SimpleAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 353CAFE9F0B350846D3D3409667857CA /* SimpleAnimation-dummy.m */; };
-		5CDE7C1B8CF75883E048F571595B2BB7 /* Pods-StickyNotsIosApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C159B26BC80C45DAA8B244EED863BE66 /* Pods-StickyNotsIosApp-dummy.m */; };
+		2EBA5AE75D6E6E7791D0511609187D7C /* SimpleAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D05E58022326E0E25DC21EF98F25884 /* SimpleAnimation-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3C58B62145A6881E55F8776A27EEBB66 /* UIView+SimpleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E90A47FF1D64FA8EB8C446B6D58CC /* UIView+SimpleAnimation.swift */; };
+		56ABF4D5A5E1DBCD74ECC3590EE4B557 /* SimpleAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F929BD05D66EF54AC3E30FAC5FAC52 /* SimpleAnimation-dummy.m */; };
+		669293D89DA2CA620C3534B9FBBE37BC /* Pods-StickyNotsIosApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C159B26BC80C45DAA8B244EED863BE66 /* Pods-StickyNotsIosApp-dummy.m */; };
+		8ADF81A90C7710CDEDD3E2F3640D8E39 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB68737A22DDDB8820F3B11D16EE23B /* SwiftySound-dummy.m */; };
+		B33C97BEC5427DACA8074F6B6159C649 /* Pods-StickyNotsIosApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF78D82BA7636018A83F0741A0CEB8A8 /* Pods-StickyNotsIosApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D1F99897E64ED817B925CE772D1AF595 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A80909E1FA7AC09F2ACC73792A512 /* Sound.swift */; };
+		EC67C9BF172187642FF1C68A3E8DF4DA /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 680CC7980B8BD7DDEE05E2F20E8F9050 /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8A5205C3608F585EB3C132918DCBC0A8 /* PBXContainerItemProxy */ = {
+		8D278177BE5FB7821F64EE692638DD5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 16C29784E4E523C09870A2370B920B17;
 			remoteInfo = SimpleAnimation;
 		};
+		F0F5270C85DF57EBE081191121C83983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF76419D4650F093FFACB1AD713C1EF1;
+			remoteInfo = SwiftySound;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02BCD6BA58F0C713BFBA7C0AC381A32C /* SimpleAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleAnimation.debug.xcconfig; sourceTree = "<group>"; };
 		1C6C204F3633583C664F13CE7CB6C619 /* libPods-StickyNotsIosApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-StickyNotsIosApp.a"; path = "libPods-StickyNotsIosApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		242552C05EF71FFD62E6D29BFFA2158E /* SimpleAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleAnimation.xcconfig; sourceTree = "<group>"; };
-		353CAFE9F0B350846D3D3409667857CA /* SimpleAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleAnimation-dummy.m"; sourceTree = "<group>"; };
-		3D9267BD1C35273E4CD589D8B5B02914 /* SimpleAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAnimation-prefix.pch"; sourceTree = "<group>"; };
-		40F91668D3CA170569133088DA358236 /* UIView+SimpleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+SimpleAnimation.swift"; path = "Source/UIView+SimpleAnimation.swift"; sourceTree = "<group>"; };
+		2C5BDC24729544745BA086043717F3FA /* SimpleAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAnimation-prefix.pch"; sourceTree = "<group>"; };
+		2DCBE0376AB6F3201BCC214D2B85EF21 /* SimpleAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleAnimation.release.xcconfig; sourceTree = "<group>"; };
 		4CE1D48AB4E1D904BFFF4CA40AF2CD0C /* Pods-StickyNotsIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StickyNotsIosApp.debug.xcconfig"; sourceTree = "<group>"; };
+		64F929BD05D66EF54AC3E30FAC5FAC52 /* SimpleAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleAnimation-dummy.m"; sourceTree = "<group>"; };
+		680CC7980B8BD7DDEE05E2F20E8F9050 /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
+		784A80909E1FA7AC09F2ACC73792A512 /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
 		7F441BB162B3AFECC54EF9639765E309 /* Pods-StickyNotsIosApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StickyNotsIosApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		87BCBBC84EE18998E797537AA3D6D123 /* SimpleAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleAnimation.modulemap; sourceTree = "<group>"; };
+		8D05E58022326E0E25DC21EF98F25884 /* SimpleAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAnimation-umbrella.h"; sourceTree = "<group>"; };
+		996615DEDCD6C2933EC3F8504427765B /* libSwiftySound.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftySound.a; path = libSwiftySound.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E4576613332F9D4ACBC7F174EA2416D /* libSimpleAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSimpleAnimation.a; path = libSimpleAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AD759BC9D70C985C09F1DD3882C828 /* SimpleAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleAnimation.modulemap; sourceTree = "<group>"; };
 		AB22664A16B02C86F5C0AA5485B9A8F3 /* Pods-StickyNotsIosApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StickyNotsIosApp.modulemap"; sourceTree = "<group>"; };
 		AD641F563BED021DC5CE8056E9A1298B /* Pods-StickyNotsIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StickyNotsIosApp.release.xcconfig"; sourceTree = "<group>"; };
 		AF78D82BA7636018A83F0741A0CEB8A8 /* Pods-StickyNotsIosApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StickyNotsIosApp-umbrella.h"; sourceTree = "<group>"; };
+		B35FBCB319972FDC38C383C707ED605C /* SwiftySound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.debug.xcconfig; sourceTree = "<group>"; };
+		B9779E9D4516E071615C0D6F8FEA9FEA /* SwiftySound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.release.xcconfig; sourceTree = "<group>"; };
 		C159B26BC80C45DAA8B244EED863BE66 /* Pods-StickyNotsIosApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StickyNotsIosApp-dummy.m"; sourceTree = "<group>"; };
 		D85F9FA4FE3B5FF2C19279C7581BDA9F /* Pods-StickyNotsIosApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StickyNotsIosApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F8700C2327D798463F901A385BFB440C /* SimpleAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAnimation-umbrella.h"; sourceTree = "<group>"; };
+		EDB68737A22DDDB8820F3B11D16EE23B /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
+		FC761FFC271F804A81C30A7B8BA734A5 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
+		FD304C333E88FDA035085D9E442522E0 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftySound.modulemap; sourceTree = "<group>"; };
+		FD3E90A47FF1D64FA8EB8C446B6D58CC /* UIView+SimpleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+SimpleAnimation.swift"; path = "Source/UIView+SimpleAnimation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		175E72EA6113F0EED320FA60BC606133 /* Frameworks */ = {
+		5E9CCDE0DA4F3C1E609EF37484B6E5A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C3C0B0F912A3EF5CB662D78575D6716 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,23 +87,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0EE7BFDE2544AF2C2AC7827534E728FB /* SimpleAnimation */ = {
+		12D1DB3746101C6B413C7C28DA41E34A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				40F91668D3CA170569133088DA358236 /* UIView+SimpleAnimation.swift */,
-				D1B9999D514552C109A094AD81E1F8BA /* Support Files */,
+				FD304C333E88FDA035085D9E442522E0 /* SwiftySound.modulemap */,
+				EDB68737A22DDDB8820F3B11D16EE23B /* SwiftySound-dummy.m */,
+				FC761FFC271F804A81C30A7B8BA734A5 /* SwiftySound-prefix.pch */,
+				680CC7980B8BD7DDEE05E2F20E8F9050 /* SwiftySound-umbrella.h */,
+				B35FBCB319972FDC38C383C707ED605C /* SwiftySound.debug.xcconfig */,
+				B9779E9D4516E071615C0D6F8FEA9FEA /* SwiftySound.release.xcconfig */,
 			);
-			name = SimpleAnimation;
-			path = SimpleAnimation;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftySound";
 			sourceTree = "<group>";
 		};
-		19161169C6E02F4A40BDB485FAD9246A /* Products */ = {
+		137D2C44DC0710B011ED5B225C2D3022 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C6C204F3633583C664F13CE7CB6C619 /* libPods-StickyNotsIosApp.a */,
-				9E4576613332F9D4ACBC7F174EA2416D /* libSimpleAnimation.a */,
+				6CA91467D7D9A2D4E1B6537081647D2F /* SimpleAnimation */,
+				DBE71EE7515871E9542EBF218B0C1457 /* SwiftySound */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		667D2F750C7527A06752399F882B1062 /* Targets Support Files */ = {
@@ -88,12 +118,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AD35D5491A31569A859F8018B2EB42B8 /* Pods */ = {
+		6CA91467D7D9A2D4E1B6537081647D2F /* SimpleAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				0EE7BFDE2544AF2C2AC7827534E728FB /* SimpleAnimation */,
+				FD3E90A47FF1D64FA8EB8C446B6D58CC /* UIView+SimpleAnimation.swift */,
+				EF4AABBFA43BF216E883015F2636F00C /* Support Files */,
 			);
-			name = Pods;
+			name = SimpleAnimation;
+			path = SimpleAnimation;
+			sourceTree = "<group>";
+		};
+		B0F357377E7D258344B8E16227DAFB7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C6C204F3633583C664F13CE7CB6C619 /* libPods-StickyNotsIosApp.a */,
+				9E4576613332F9D4ACBC7F174EA2416D /* libSimpleAnimation.a */,
+				996615DEDCD6C2933EC3F8504427765B /* libSwiftySound.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -101,23 +143,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				AD35D5491A31569A859F8018B2EB42B8 /* Pods */,
-				19161169C6E02F4A40BDB485FAD9246A /* Products */,
+				137D2C44DC0710B011ED5B225C2D3022 /* Pods */,
+				B0F357377E7D258344B8E16227DAFB7A /* Products */,
 				667D2F750C7527A06752399F882B1062 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D1B9999D514552C109A094AD81E1F8BA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				87BCBBC84EE18998E797537AA3D6D123 /* SimpleAnimation.modulemap */,
-				242552C05EF71FFD62E6D29BFFA2158E /* SimpleAnimation.xcconfig */,
-				353CAFE9F0B350846D3D3409667857CA /* SimpleAnimation-dummy.m */,
-				3D9267BD1C35273E4CD589D8B5B02914 /* SimpleAnimation-prefix.pch */,
-				F8700C2327D798463F901A385BFB440C /* SimpleAnimation-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SimpleAnimation";
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -125,6 +154,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBE71EE7515871E9542EBF218B0C1457 /* SwiftySound */ = {
+			isa = PBXGroup;
+			children = (
+				784A80909E1FA7AC09F2ACC73792A512 /* Sound.swift */,
+				12D1DB3746101C6B413C7C28DA41E34A /* Support Files */,
+			);
+			name = SwiftySound;
+			path = SwiftySound;
 			sourceTree = "<group>";
 		};
 		DF7391A6CD03B37D07C8411F7B7D098E /* Pods-StickyNotsIosApp */ = {
@@ -142,6 +181,20 @@
 			path = "Target Support Files/Pods-StickyNotsIosApp";
 			sourceTree = "<group>";
 		};
+		EF4AABBFA43BF216E883015F2636F00C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2AD759BC9D70C985C09F1DD3882C828 /* SimpleAnimation.modulemap */,
+				64F929BD05D66EF54AC3E30FAC5FAC52 /* SimpleAnimation-dummy.m */,
+				2C5BDC24729544745BA086043717F3FA /* SimpleAnimation-prefix.pch */,
+				8D05E58022326E0E25DC21EF98F25884 /* SimpleAnimation-umbrella.h */,
+				02BCD6BA58F0C713BFBA7C0AC381A32C /* SimpleAnimation.debug.xcconfig */,
+				2DCBE0376AB6F3201BCC214D2B85EF21 /* SimpleAnimation.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimpleAnimation";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,11 +206,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDFBBC5AA1981DEE70FFF800A33E9D10 /* Headers */ = {
+		9B64DDAE9FC80DB4AC0C0E3791F81DF1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A29D14DEF4A0A622301A88C6FD18FB /* Pods-StickyNotsIosApp-umbrella.h in Headers */,
+				EC67C9BF172187642FF1C68A3E8DF4DA /* SwiftySound-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF91CACDE46BF3AD5063E36E51042452 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B33C97BEC5427DACA8074F6B6159C649 /* Pods-StickyNotsIosApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,20 +245,39 @@
 		};
 		4791D95C6197F340CBA3791D2554FA9C /* Pods-StickyNotsIosApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A71D01199E53056D9EA4BB5FB17A3535 /* Build configuration list for PBXNativeTarget "Pods-StickyNotsIosApp" */;
+			buildConfigurationList = 223678414186EA85B42B10E40FE9A99B /* Build configuration list for PBXNativeTarget "Pods-StickyNotsIosApp" */;
 			buildPhases = (
-				DDFBBC5AA1981DEE70FFF800A33E9D10 /* Headers */,
-				FF911178868FBE43DCF46687BB54F6BE /* Sources */,
-				175E72EA6113F0EED320FA60BC606133 /* Frameworks */,
+				AF91CACDE46BF3AD5063E36E51042452 /* Headers */,
+				553995236A73C693A7B9743506A2FDAC /* Sources */,
+				5E9CCDE0DA4F3C1E609EF37484B6E5A4 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5247352A73D7856180938D0767E99D8B /* PBXTargetDependency */,
+				9176A80741208041F13475D39CE0127D /* PBXTargetDependency */,
+				3267A7489AF909BE322F54F847D622A5 /* PBXTargetDependency */,
 			);
 			name = "Pods-StickyNotsIosApp";
 			productName = "Pods-StickyNotsIosApp";
 			productReference = 1C6C204F3633583C664F13CE7CB6C619 /* libPods-StickyNotsIosApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AF924DD6942BE4322B8D02115820C4B /* Build configuration list for PBXNativeTarget "SwiftySound" */;
+			buildPhases = (
+				9B64DDAE9FC80DB4AC0C0E3791F81DF1 /* Headers */,
+				72B6A7502902B3EA2F22C9EABB5A8C4B /* Sources */,
+				7C3C0B0F912A3EF5CB662D78575D6716 /* Frameworks */,
+				A73B9967D2D38190C05EAFFFE40487BD /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftySound;
+			productName = SwiftySound;
+			productReference = 996615DEDCD6C2933EC3F8504427765B /* libSwiftySound.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +290,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -218,12 +298,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 19161169C6E02F4A40BDB485FAD9246A /* Products */;
+			productRefGroup = B0F357377E7D258344B8E16227DAFB7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4791D95C6197F340CBA3791D2554FA9C /* Pods-StickyNotsIosApp */,
 				16C29784E4E523C09870A2370B920B17 /* SimpleAnimation */,
+				AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */,
 			);
 		};
 /* End PBXProject section */
@@ -253,14 +334,47 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SimpleAnimation/SimpleAnimation.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SimpleAnimation/SimpleAnimation-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
+		A73B9967D2D38190C05EAFFFE40487BD /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound.modulemap",
+				"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF911178868FBE43DCF46687BB54F6BE /* Sources */ = {
+		553995236A73C693A7B9743506A2FDAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CDE7C1B8CF75883E048F571595B2BB7 /* Pods-StickyNotsIosApp-dummy.m in Sources */,
+				669293D89DA2CA620C3534B9FBBE37BC /* Pods-StickyNotsIosApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B6A7502902B3EA2F22C9EABB5A8C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1F99897E64ED817B925CE772D1AF595 /* Sound.swift in Sources */,
+				8ADF81A90C7710CDEDD3E2F3640D8E39 /* SwiftySound-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,15 +390,145 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5247352A73D7856180938D0767E99D8B /* PBXTargetDependency */ = {
+		3267A7489AF909BE322F54F847D622A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftySound;
+			target = AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */;
+			targetProxy = F0F5270C85DF57EBE081191121C83983 /* PBXContainerItemProxy */;
+		};
+		9176A80741208041F13475D39CE0127D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SimpleAnimation;
 			target = 16C29784E4E523C09870A2370B920B17 /* SimpleAnimation */;
-			targetProxy = 8A5205C3608F585EB3C132918DCBC0A8 /* PBXContainerItemProxy */;
+			targetProxy = 8D278177BE5FB7821F64EE692638DD5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1D84AA0740B5D4FEA5312B6DFC1384D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DCBE0376AB6F3201BCC214D2B85EF21 /* SimpleAnimation.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleAnimation/SimpleAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SimpleAnimation/SimpleAnimation.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SimpleAnimation;
+				PRODUCT_NAME = SimpleAnimation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CC8A5B3E49EA7903541456A5580C631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9779E9D4516E071615C0D6F8FEA9FEA /* SwiftySound.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SwiftySound/SwiftySound.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftySound;
+				PRODUCT_NAME = SwiftySound;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C7D75F8301A0DEF48B33656BEF44CAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B35FBCB319972FDC38C383C707ED605C /* SwiftySound.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SwiftySound/SwiftySound.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftySound;
+				PRODUCT_NAME = SwiftySound;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B6860CA91579C9FC9B889809FDD083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CE1D48AB4E1D904BFFF4CA40AF2CD0C /* Pods-StickyNotsIosApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92F0E032BFD896A6E0AABA0246FAE577 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD641F563BED021DC5CE8056E9A1298B /* Pods-StickyNotsIosApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,35 +593,9 @@
 			};
 			name = Debug;
 		};
-		94AF2F2349A343A6FC0227F67A5E7848 /* Release */ = {
+		C6E46FD43D6C2F2E8F2A97A7E1B39FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 242552C05EF71FFD62E6D29BFFA2158E /* SimpleAnimation.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SimpleAnimation/SimpleAnimation-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/SimpleAnimation/SimpleAnimation.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SimpleAnimation;
-				PRODUCT_NAME = SimpleAnimation;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C6C996BE12462974AAC20C344BD140E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 242552C05EF71FFD62E6D29BFFA2158E /* SimpleAnimation.xcconfig */;
+			baseConfigurationReference = 02BCD6BA58F0C713BFBA7C0AC381A32C /* SimpleAnimation.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -460,56 +678,27 @@
 			};
 			name = Release;
 		};
-		EDA86F94ED8F0861DA61050C92DE1DA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD641F563BED021DC5CE8056E9A1298B /* Pods-StickyNotsIosApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F35F4A08EC798124208B9E86A2294238 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CE1D48AB4E1D904BFFF4CA40AF2CD0C /* Pods-StickyNotsIosApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		223678414186EA85B42B10E40FE9A99B /* Build configuration list for PBXNativeTarget "Pods-StickyNotsIosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B6860CA91579C9FC9B889809FDD083A /* Debug */,
+				92F0E032BFD896A6E0AABA0246FAE577 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AF924DD6942BE4322B8D02115820C4B /* Build configuration list for PBXNativeTarget "SwiftySound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C7D75F8301A0DEF48B33656BEF44CAF /* Debug */,
+				2CC8A5B3E49EA7903541456A5580C631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -522,17 +711,8 @@
 		6A8A37007305CCE026B097DBB7CBE5E6 /* Build configuration list for PBXNativeTarget "SimpleAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6C996BE12462974AAC20C344BD140E9 /* Debug */,
-				94AF2F2349A343A6FC0227F67A5E7848 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A71D01199E53056D9EA4BB5FB17A3535 /* Build configuration list for PBXNativeTarget "Pods-StickyNotsIosApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F35F4A08EC798124208B9E86A2294238 /* Debug */,
-				EDA86F94ED8F0861DA61050C92DE1DA8 /* Release */,
+				C6E46FD43D6C2F2E8F2A97A7E1B39FFF /* Debug */,
+				1D84AA0740B5D4FEA5312B6DFC1384D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

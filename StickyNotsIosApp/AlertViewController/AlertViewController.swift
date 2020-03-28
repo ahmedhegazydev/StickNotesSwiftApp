@@ -83,7 +83,6 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         //addingTheHorizontalColorsTableView()
         addingColorHCollectionView()
         
-        
         addingTheCenterEditText()
         
     }
