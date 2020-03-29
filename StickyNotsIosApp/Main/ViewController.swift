@@ -15,12 +15,14 @@ class ViewController: UIViewController{
     
     
     @IBOutlet weak var ivScreenShot: UIImageView!
+    
+//    @IBOutlet weak var labelYourStickyNote: GrowingTextView!
     var textFromAlertVController: String = ""
     let userDefaults: UserDefaults = UserDefaults.standard
     
-    //@IBOutlet var labelYourStickyNote: UILabel!
-    var labelYourStickyNote: UILabel!
-    
+    @IBOutlet var labelYourStickyNote: UILabel!
+    //var labelYourStickyNote: UILabel!
+    //var labelYourStickyNote: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,18 +143,19 @@ class ViewController: UIViewController{
         
         //init
         //self.labelYourStickyNote: UILabel = UILabel.init()
-        self.labelYourStickyNote = UILabel()
+        //self.labelYourStickyNote = UILabel()
+        //labelYourStickyNote = UITextView.init()
         
         
         //Setting attributes to the label
         //resizing the height
         //        self.labelYourStickyNote.frame = CGRect(x: self.view.frame.width / 2, y: self.view.frame.width / 2, width: self.view.frame.width, height: CGFloat(50))
-        labelYourStickyNote.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50)
+//        labelYourStickyNote.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50)
         
         
         //To center a UILabel just add this row
         //centering the label
-        labelYourStickyNote.center = self.view.center
+//        labelYourStickyNote.center = self.view.center
         
         
         //Setting the text
@@ -174,7 +177,7 @@ class ViewController: UIViewController{
         //        self.labelYourStickyNote.font = UIFont.systemFont(ofSize: 30)
         //        self.labelYourStickyNote.font = UIFont(name: "Didot", size: 30)
         //        self.labelYourStickyNote.font = UIFont(name: "Optima", size: 30)
-        labelYourStickyNote.font = UIFont(name: "Futura", size: 30)
+        labelYourStickyNote.font = UIFont(name: "Futura", size: 26)
         
         
         
@@ -185,10 +188,17 @@ class ViewController: UIViewController{
         let tap =  UITapGestureRecognizer(target: self, action: #selector(onHandleTapOnStickyNoteClicked(sender:)))
         labelYourStickyNote.addGestureRecognizer(tap)
         
+        //adding padding
+//        let padding = CGFloat(10)
+//        labelYourStickyNote.textContainerInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        
+        //
+        self.labelYourStickyNote.numberOfLines = 0
         
         
         //Adding the view
         self.view.addSubview(labelYourStickyNote)
+        
     }
     
     @objc func onHandleTapOnStickyNoteClicked(sender: UITapGestureRecognizer){

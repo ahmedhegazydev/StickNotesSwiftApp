@@ -21,17 +21,50 @@
                                     <constraint firstAttribute="height" constant="222" id="aqe-ex-PAf"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBb-mX-cI3">
+                                <rect key="frame" x="30" y="448" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c78-zc-jVa" customClass="GrowingTextView" customModule="StickyNotes" customModuleProvider="target">
+                                <rect key="frame" x="30" y="423" width="354" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IM7-iS-0vF"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minHeight">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ync-AP-K7D" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ben-tW-NvM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c78-zc-jVa" secondAttribute="trailing" constant="30" id="Df5-KZ-5E6"/>
+                            <constraint firstItem="BBb-mX-cI3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fe2-QO-p6o"/>
                             <constraint firstItem="ync-AP-K7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fNo-2w-oW5"/>
+                            <constraint firstItem="c78-zc-jVa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mG5-QV-fwX"/>
+                            <constraint firstItem="c78-zc-jVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="r7l-FK-83c"/>
+                            <constraint firstItem="BBb-mX-cI3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rJP-Gu-GFY"/>
                             <constraint firstAttribute="bottom" secondItem="ync-AP-K7D" secondAttribute="bottom" id="xxh-o3-h6N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BBb-mX-cI3" secondAttribute="trailing" constant="30" id="zwS-nM-pUx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="c78-zc-jVa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="ivScreenShot" destination="ync-AP-K7D" id="fwr-Gu-nqx"/>
+                        <outlet property="labelYourStickyNote" destination="BBb-mX-cI3" id="n9e-a9-LxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
