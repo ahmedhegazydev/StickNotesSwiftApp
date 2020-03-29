@@ -16,6 +16,9 @@ import AVFoundation
 
 class AlertViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //we will use the userdefaults
+    let userDefaults: UserDefaults = UserDefaults.standard
+    var delegatePassNotesToMainCv: HandleNotesDelegate?
     var selectedColor: UIColor = .black//default
     
     @IBOutlet weak var etEnterYourNotes: GrowingTextView!
@@ -23,12 +26,14 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
     var colorsArray : [UIColor] = [
         //.black,
         .red, .blue,
-        .gray, .yellow, .brown,
-        .cyan, .lightGray, .green,
-        .systemOrange, .systemRed, .systemBlue,
-        .systemPink, .systemTeal, .systemGray2,
-        .systemGray3, .systemGray4, .systemGray5,
-        .systemIndigo
+        .gray,.yellow,
+        .brown, .cyan,
+        .lightGray, .green,
+//        .systemOrange, .systemRed,
+//        .systemBlue, .systemPink,
+//        .systemTeal, .systemGray2,
+//        .systemGray3, .systemGray4,
+//        .systemGray5, .systemIndigo
     ]
     
     //fileprivate let etEnterYourNotes: UITextView =  {
@@ -72,6 +77,8 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         //setting the bg color for the main view container
         //self.view.backgroundColor = .darkGray
         self.view.backgroundColor = UIColor.black
@@ -79,13 +86,15 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         //Sometime the view controller may incorrectly adjust the inset of textview automatically. To avoid this, set automaticallyAdjustsScrollViewInsets to false
         //automaticallyAdjustsScrollViewInsets = false
         
+        //setting on click to view
+                exitOnViewClick()
+        //setting on double tap click to the view
+        //addDoubleTapGestRecognizerToMainView()
+
         
-        //        exitOnViewClick()
         //addingTheHorizontalColorsTableView()
         addingColorHCollectionView()
         addingTheCenterEditText()
-        
-        addDoubleTapGestRecognizerToMainView()
     }
     
     func addDoubleTapGestRecognizerToMainView(){
@@ -118,7 +127,6 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
         //        self.etEnterYourNotes.center = self.view.center
         //        //center the text
         self.etEnterYourNotes.textAlignment = .center
-        //        self.etEnterYourNotes.delegate = self
         //        //Adding margin left and right
         //        let pading = CGFloat(10)
         //        self.etEnterYourNotes.textContainerInset = UIEdgeInsets(top: 0, left: pading, bottom: 0, right: pading)
@@ -132,8 +140,15 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        self.etEnterYourNotes.translatesAutoresizingMaskIntoConstraints = false
         self.etEnterYourNotes.backgroundColor = UIColor.white
         self.etEnterYourNotes.layer.cornerRadius = 25
+        //self.etEnterYourNotes.delegate = self
+       
+        //for getting keyboard focus
+    self.etEnterYourNotes.becomeFirstResponder()
+        
         
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -202,8 +217,26 @@ class AlertViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @objc func handleOnViewClick(sender: UITapGestureRecognizer){
         debugPrint("On View clicked")
-        dismiss(animated: true) {}
         
+        
+        //saving the text into userdefaults
+        if !etEnterYourNotes.text.isEmpty{
+            userDefaults.setValue(self.etEnterYourNotes.text, forKey: Constants.USER_NOTES)
+            debugPrint(userDefaults.string(forKey: Constants.USER_NOTES) as Any)
+        }
+        
+        let mainVc = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "MainVC") as ViewController
+        mainVc.modalPresentationStyle = .overFullScreen
+        //mainVc.modalTransitionStyle = .coverVertical//sliding to top
+        mainVc.modalTransitionStyle = .crossDissolve//fade anim
+        //mainVc.textFromAlertVController = self.etEnterYourNotes.text
+        self.present(mainVc, animated: true) {}
+        
+        
+        
+//        dismiss(animated: true) {}
+//
+//        delegatePassNotesToMainCv?.onFetchTextFromAlertCv(self.etEnterYourNotes.text)
         
     }
     
@@ -339,6 +372,7 @@ extension AlertViewController: UICollectionViewDelegateFlowLayout, UICollectionV
 
 
 extension AlertViewController: UITextViewDelegate{
+    
     
     func textViewDidChange(_ textView: UITextView) {
         debugPrint("TextView text = \(textView.text)")

@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LOq-bd-0vG" customClass="GrowingTextView" customModule="StickyNotes" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LOq-bd-0vG" customClass="GrowingTextView" customModule="StickyNotes" customModuleProvider="target">
                                 <rect key="frame" x="20" y="423" width="374" height="51"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -30,8 +30,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="LOq-bd-0vG" firstAttribute="leading" secondItem="Hco-5I-rCk" secondAttribute="leading" constant="30" id="Nh6-O5-d7E"/>
-                            <constraint firstItem="Hco-5I-rCk" firstAttribute="trailing" secondItem="LOq-bd-0vG" secondAttribute="trailing" constant="30" id="fPk-rc-IqT"/>
+                            <constraint firstItem="LOq-bd-0vG" firstAttribute="leading" secondItem="Hco-5I-rCk" secondAttribute="leading" constant="20" id="Nh6-O5-d7E"/>
+                            <constraint firstItem="Hco-5I-rCk" firstAttribute="trailing" secondItem="LOq-bd-0vG" secondAttribute="trailing" constant="20" id="fPk-rc-IqT"/>
                             <constraint firstItem="LOq-bd-0vG" firstAttribute="centerY" secondItem="05h-fd-Hbd" secondAttribute="centerY" id="wXb-5z-4Ge"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hco-5I-rCk"/>

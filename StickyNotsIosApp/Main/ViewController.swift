@@ -11,38 +11,95 @@ import SwiftySound
 import AVFoundation
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
     
+    var textFromAlertVController: String = ""
+    let userDefaults: UserDefaults = UserDefaults.standard
     
     //@IBOutlet var labelYourStickyNote: UILabel!
-    //var labelYourStickyNote: UILabel!
+    var labelYourStickyNote: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         debugPrint("viewDidLoad")
+        
+        
+        
         //setOnClicks()
+        addDoubleTapGestRecognizerToMainView()
+        
+        //setting the bg color for the main view container
+               //self.view.backgroundColor = .darkGray
+               self.view.backgroundColor = UIColor.black
+               
+               
+               addingTheCenterLabel()
+        
+    }
+    
+    func setTheAlertTxtIntoMainTxt(){
+        let txtFromUserDefaults = userDefaults.string(forKey: Constants.USER_NOTES)
+        if txtFromUserDefaults != nil && !txtFromUserDefaults!.isEmpty{
+            //contains saved string
+            self.labelYourStickyNote?.text = txtFromUserDefaults
+        }else{
+            labelYourStickyNote.text = "Your Sticky Note"
+        }
+        
+//        if !textFromAlertVController.isEmpty{
+//         self.labelYourStickyNote.text = textFromAlertVController
+//        }
+        
+    }
+    
+    func addDoubleTapGestRecognizerToMainView(){
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(self.onHandleDoubleTapForMainView(sender: )))
+        doubleTap.numberOfTapsRequired = 2//double
+        self.view.addGestureRecognizer(doubleTap)
+    }
+    
+    @objc func onHandleDoubleTapForMainView(sender: UITapGestureRecognizer? = nil){
+        
+        debugPrint("2 taps")
+        
+        //play system sound
+        //1108    photoShutter.caf    CameraShutter
+        let soundId: SystemSoundID = 1108
+        AudioServicesPlaySystemSound(soundId)
+        
+        //take screen
+        
+        
+        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         debugPrint("viewDidAppear")
         
-        //setting the bg color for the main view container
-        //self.view.backgroundColor = .darkGray
-        self.view.backgroundColor = UIColor.black
         
-        
-        addingTheCenterLabel()
+        //setting the text from the user defaults
+         //into the main vc textview
+         //to the center label
+        setTheAlertTxtIntoMainTxt()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        debugPrint("viewWillAppear")
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        debugPrint("viewWillDisappear")
+        
+    }
     func addingTheCenterLabel(){
         
         //init
-        let labelYourStickyNote: UILabel = UILabel.init()
+        //self.labelYourStickyNote: UILabel = UILabel.init()
+        self.labelYourStickyNote = UILabel()
         
         
         //Setting attributes to the label
@@ -57,7 +114,7 @@ class ViewController: UIViewController {
         
         
         //Setting the text
-        labelYourStickyNote.text = "Your Sticky Note"
+//        labelYourStickyNote.text = "Your Sticky Note"
         
         //Setting the text alignment
         labelYourStickyNote.textAlignment =  .center
@@ -107,16 +164,19 @@ class ViewController: UIViewController {
         
         let alertViewController: AlertViewController = AlertService.shared.alert()
         self.present(alertViewController, animated: true) {
-            debugPrint("showing the alert viewcontroller above main vc")
-            
-            //self.playWavSound()
-            self.playSystemSound()
-            
+            //take some time, as after presenting
+//            //self.playWavSound()
+//            self.playSystemSound()
         }
+        //immediately
+        debugPrint("showing the alert viewcontroller above main vc")
+        //self.playWavSound()
+        self.playSystemSound()
     }
     
     func playSystemSound(){
         //from 1000 to 4095
+
         //https://github.com/TUNER88/iOSSystemSoundsLibrary
         let systemSoundId: SystemSoundID = 1016//tweet sound
         AudioServicesPlaySystemSound(systemSoundId)
@@ -129,9 +189,11 @@ class ViewController: UIViewController {
 //        Sound.play(url: fileURL)
     }
     
-    
-    
-    
-    
+}
+
+extension ViewController: HandleNotesDelegate{
+    func onFetchTextFromAlertCv(_ notes: String) {
+           
+       }
 }
 

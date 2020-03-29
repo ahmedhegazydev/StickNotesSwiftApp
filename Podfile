@@ -19,4 +19,7 @@ target 'StickyNotsIosApp' do
   pod 'GrowingTextView', '0.7.2'
 
 
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  
 end

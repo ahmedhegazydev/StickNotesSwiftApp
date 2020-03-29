@@ -8,7 +8,7 @@
 struct Constants {
     
     static let AnyThing = ""
-    
+    static let USER_NOTES = "USER_NOTES"
     
 }
 

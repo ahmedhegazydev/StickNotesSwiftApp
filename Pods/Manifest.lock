@@ -1,24 +1,38 @@
 PODS:
   - GrowingTextView (0.7.2)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - SimpleAnimation (0.4.2)
   - SwiftySound (1.2.0)
 
 DEPENDENCIES:
   - GrowingTextView (= 0.7.2)
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
   - SimpleAnimation
   - SwiftySound
 
 SPEC REPOS:
   trunk:
     - GrowingTextView
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SimpleAnimation
     - SwiftySound
 
 SPEC CHECKSUMS:
   GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleAnimation: 5430010b9548f392e7459290acce01c9ceba7171
   SwiftySound: 9eb28bb14edb601b40027e44319e0ef8383f88bf
 
-PODFILE CHECKSUM: a4a0e778e3f2dd806580ffbbaa258be00c2b4ffd
+PODFILE CHECKSUM: cbe281e052b291aa1062b0955611bca189c68a7c
 
 COCOAPODS: 1.9.1
