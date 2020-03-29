@@ -22,4 +22,7 @@ target 'StickyNotsIosApp' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   
+  pod 'Toast-Swift', '~> 5.0.1'
+
+  
 end

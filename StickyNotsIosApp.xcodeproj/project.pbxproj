@@ -10,6 +10,7 @@
 		002D4F5C242F028500D69EC8 /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 002D4F5B242F028500D69EC8 /* sound.wav */; };
 		002D4F5F242F1BB100D69EC8 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002D4F5E242F1BB100D69EC8 /* GrowingTextView.swift */; };
 		0054BA86243018CE0045888D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054BA85243018CE0045888D /* Protocols.swift */; };
+		0054BA8924305E2C0045888D /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054BA8824305E2C0045888D /* ImageSaver.swift */; };
 		1850EF508BB46184AE090112 /* libPods-StickyNotsIosApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */; };
 		E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A2F38241403BD00D7B221 /* TabViewController.swift */; };
 		E24A2F3B2414065100D7B221 /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24A2F3A2414065100D7B221 /* Tab.storyboard */; };
@@ -32,6 +33,7 @@
 		002D4F5B242F028500D69EC8 /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		002D4F5E242F1BB100D69EC8 /* GrowingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
 		0054BA85243018CE0045888D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0054BA8824305E2C0045888D /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		347E91F7A02BE2CAF3EC504E /* Pods-StickyNotsIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyNotsIosApp.release.xcconfig"; path = "Target Support Files/Pods-StickyNotsIosApp/Pods-StickyNotsIosApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFCD917CE7B7823004D6F4E6 /* libPods-StickyNotsIosApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StickyNotsIosApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24A2F38241403BD00D7B221 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		0054BA8724305D9A0045888D /* ImageSaver */ = {
+			isa = PBXGroup;
+			children = (
+				0054BA8824305E2C0045888D /* ImageSaver.swift */,
+			);
+			path = ImageSaver;
+			sourceTree = "<group>";
+		};
 		DE89E11167125381758DC27D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		E24DCC1B2410CBB90026338D /* StickyNotsIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				0054BA8724305D9A0045888D /* ImageSaver */,
 				0054BA84243018310045888D /* Protocols */,
 				002D4F5D242F1B9300D69EC8 /* GrowingTV */,
 				002D4F5A242F025D00D69EC8 /* Sounds */,
@@ -305,6 +316,7 @@
 				E24DCC212410CBB90026338D /* ViewController.swift in Sources */,
 				E24DCC1D2410CBB90026338D /* AppDelegate.swift in Sources */,
 				E24A2F39241403BD00D7B221 /* TabViewController.swift in Sources */,
+				0054BA8924305E2C0045888D /* ImageSaver.swift in Sources */,
 				E255FA31241AEA480049870C /* ColorTableViewCell.swift in Sources */,
 				E24DCC1F2410CBB90026338D /* SceneDelegate.swift in Sources */,
 				E255FA2E241ADEA50049870C /* AlertService.swift in Sources */,

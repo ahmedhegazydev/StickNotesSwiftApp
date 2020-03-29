@@ -9,11 +9,12 @@
 import UIKit
 import SwiftySound
 import AVFoundation
-
+import Toast_Swift
 
 class ViewController: UIViewController{
     
     
+    @IBOutlet weak var ivScreenShot: UIImageView!
     var textFromAlertVController: String = ""
     let userDefaults: UserDefaults = UserDefaults.standard
     
@@ -71,10 +72,51 @@ class ViewController: UIViewController{
         AudioServicesPlaySystemSound(soundId)
         
         //take screen
+        guard let image = self.view.takeScreenShot1() else { return}
+        //self.ivScreenShot.image = image//done
+        let currentTime = CACurrentMediaTime();
+        print("\(currentTime)")
+        //If you want only the decimal part (often used when syncing animations),
+        let currentTimeDecimalPart = CACurrentMediaTime().truncatingRemainder(dividingBy: 1)
+        print("\(currentTimeDecimalPart)")
+        //saveImageToAlbum(fileName: "\(currentTime)", uiImage: image)
+        //saveImageToAlbum(fileName: "Ahmed", uiImage: image)
         
+        //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        let imageSaver = ImageSaver()
+        imageSaver.writeToPhoneAlbum(image: image)
         
+    }
+    
+    fileprivate func saveImageToAlbum(fileName name: String, uiImage image: UIImage){
         
-        
+        // get the documents directory url
+        //select any directory u want to save the image
+        let documentsDirectory = FileManager.default.urls(for: //.documentDirectory
+            //.picturesDirectory
+            //.trashDirectory
+            //.musicDirectory
+            .downloadsDirectory
+            , in: .userDomainMask).first!
+        // choose a name for your image
+        let fileName = name + ".jpg"
+        // create the destination file url to save your image
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        // get your UIImage jpeg data representation and check if the destination file url already exists
+        if let data = image.jpegData(compressionQuality:  1.0),
+          !FileManager.default.fileExists(atPath: fileURL.path) {
+            do {
+                // writes the image data to disk
+                try data.write(to: fileURL)
+                print("file saved")
+                //self.view.makeToast("File saved")
+                
+            } catch {
+                print("error saving file:", error)
+                //self.view.makeToast("Error saving file \(error)")
+                
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -197,3 +239,40 @@ extension ViewController: HandleNotesDelegate{
        }
 }
 
+extension UIView{
+    
+   func takeScreenShot1() -> UIImage? {
+        //Create the UIImage
+        UIGraphicsBeginImageContext(self.frame.size)
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        if image != nil {
+            return image!
+        }
+        
+        return UIImage()
+    
+    }
+    
+    func takeScreenShot2() -> UIImage {
+        
+        //begin
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        
+        // draw view in that context.
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        // get iamge
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if image != nil {
+            return image!
+        }
+        
+        return UIImage()
+        
+    }
+    
+}

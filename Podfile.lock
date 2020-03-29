@@ -8,6 +8,7 @@ PODS:
   - RxSwift (5.1.1)
   - SimpleAnimation (0.4.2)
   - SwiftySound (1.2.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - GrowingTextView (= 0.7.2)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - RxSwift (~> 5)
   - SimpleAnimation
   - SwiftySound
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - RxSwift
     - SimpleAnimation
     - SwiftySound
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleAnimation: 5430010b9548f392e7459290acce01c9ceba7171
   SwiftySound: 9eb28bb14edb601b40027e44319e0ef8383f88bf
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: cbe281e052b291aa1062b0955611bca189c68a7c
+PODFILE CHECKSUM: a1366d73a1ce76f8a28488d854408c5bb4c4a380
 
 COCOAPODS: 1.9.1
